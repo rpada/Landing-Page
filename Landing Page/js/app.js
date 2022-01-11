@@ -110,9 +110,6 @@ function scroll(a, navbarSections){
 		navbarSections.scrollIntoView({behavior: "smooth"})
 	})
 }
-window.addEventListener('scroll', function () {
-    scroll();
-});
 
 /**
  * End Main Functions
