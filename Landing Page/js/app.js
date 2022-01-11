@@ -23,7 +23,6 @@
  * 
 */
 const navbarSections = document.querySelectorAll('section');
-const navBarList = document.getElementById('navbar__list');
 const a = document.createElement('a'); // creates 'a' tag
 const li = document.createElement('li'); // creates 'li' tag
 
