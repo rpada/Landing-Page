@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Description](#description)
+* [Resources Used](#resources)
 
 ## Description
 
@@ -10,7 +11,7 @@ This is an interactive landing page built off of the starter code provided by Ud
 
 Dependencies: None
 
-## Resources Used 
+## Resources 
 
 https://stackoverflow.com/questions/21977349/javascript-cant-add-href-to-list-item <br>
 https://www.w3schools.com/howto/howto_js_add_class.asp <br>
