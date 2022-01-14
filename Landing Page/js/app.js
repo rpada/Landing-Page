@@ -39,7 +39,7 @@ const li = document.createElement('li'); // creates 'li' tag
  */
 
 // build the nav
-function buildNav() {
+function navbar() {
     for (i of navbarSections) { // loop through all the sections on the page
         const sectionDataNav = i.getAttribute('data-nav')
         const section = i.getAttribute('id')
@@ -74,10 +74,10 @@ var isInViewport = function(elem) { // I got this function from https://gomaketh
 };
 // from Udacity 'Working With Browser Events' 'Respond to Events' and w3schools.com/jsref/met_document_addeventlistener.asp
 // also https://knowledge.udacity.com/questions/85408
-document.addEventListener('scroll', settingActiveClass);
+document.addEventListener('scroll', activeClass);
 
 // sets "your-active-class" if the element is inside of the viewport
-function settingActiveClass() {
+function activeClass() {
     if (isInViewport(section1)) { // if section 1 is in the viewport
         section1.classList.add("your-active-class"); // add the class
     } else {
@@ -118,4 +118,4 @@ function scroll(a, section) {
  */
 
 
-buildNav()
+navbar()
