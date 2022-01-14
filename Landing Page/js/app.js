@@ -41,15 +41,15 @@ const li = document.createElement('li'); // creates 'li' tag
 // build the nav
 function buildNav() {
     for (i of navbarSections) { // loop through all the sections on the page
-        const sectionName = i.getAttribute('data-nav')
-        const sectionID = i.getAttribute('id')
+        const sectionDataNav = i.getAttribute('data-nav')
+        const section = i.getAttribute('id')
         // from Udacity 'Creating Content with Javascript' section 3, 'Add New Page Content'
         // also referenced from https://stackoverflow.com/questions/21977349/javascript-cant-add-href-to-list-item
         const a = document.createElement('a'); // creates 'a' tag
         const li = document.createElement('li'); // creates 'li' tag
-        const linkText = document.createTextNode(sectionName); //creates the text for the navbar
+        const linkText = document.createTextNode(sectionDataNav); //creates the text for the navbar
         a.appendChild(linkText); //attaches text to the a tag
-        a.setAttribute('href', '#' + sectionID); // assigns values to the a tag, hash is necessary to link within page
+        a.setAttribute('href', '#' + section); // assigns values to the a tag, hash is necessary to link within page
         li.classList.add('menu__link'); // referenced from https://www.w3schools.com/howto/howto_js_add_class.asp
         a.classList.add('menu__link') // referenced from https://www.w3schools.com/howto/howto_js_add_class.asp
         li.appendChild(a); // adds the a tag into the li tag
