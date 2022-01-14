@@ -63,15 +63,11 @@ function navbar() {
 // Add class 'active' to section when near top of viewport
 
 //checks if element is in the viewport
-var isInViewport = function(elem) { // I got this function from https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
-    var bounding = elem.getBoundingClientRect();
-    return (
-        bounding.top >= 0 &&
-        bounding.left >= 0 &&
-        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
+function isInViewport(el) {
+    const box = el.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom >= 5;
+  }
+
 // from Udacity 'Working With Browser Events' 'Respond to Events' and w3schools.com/jsref/met_document_addeventlistener.asp
 // also https://knowledge.udacity.com/questions/85408
 document.addEventListener('scroll', activeClass);

@@ -113,6 +113,7 @@ section {
 .landing__container {
     padding: 1em;
     text-align: left;
+    height: 700px;
 }
 
 @media only screen and (min-width: 35em){
