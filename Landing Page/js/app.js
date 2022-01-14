@@ -63,6 +63,7 @@ function navbar() {
 // Add class 'active' to section when near top of viewport
 
 //checks if element is in the viewport
+//pulled this function from https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport
 function isInViewport(el) {
     const box = el.getBoundingClientRect();
     return box.top < window.innerHeight && box.bottom >= 5;
