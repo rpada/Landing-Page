@@ -19,7 +19,8 @@ https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanil
 https://knowledge.udacity.com/questions/85408 <br>
 https://knowledge.udacity.com/questions/779725 <br>
 https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link <br>
-https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport
+https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport <br>
+https://knowledge.udacity.com/questions/85408#96950
 
 Udacity: <br>
 'Creating Content with Javascript' section 3, 'Add New Page Content' <br>
