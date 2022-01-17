@@ -61,44 +61,27 @@ function navbar() {
 
 
 // Add class 'active' to section when near top of viewport
-
 //checks if element is in the viewport
-const isInViewport = function(elem) { // I got this function from https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
-    const bounding = elem.getBoundingClientRect();
-    return (
-        bounding.top <= 150 && // numeric values with help from https://knowledge.udacity.com/questions/85408#96950
-        bounding.left >= 0 &&
-        bounding.bottom >= 150 && // numeric values with help from https://knowledge.udacity.com/questions/85408#96950
-        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-};
 // from Udacity 'Working With Browser Events' 'Respond to Events' and w3schools.com/jsref/met_document_addeventlistener.asp
 // also https://knowledge.udacity.com/questions/85408
-document.addEventListener('scroll', activeClass);
-
 // sets "your-active-class" if the element is inside of the viewport
-function activeClass() {
-    if (isInViewport(section1)) { // if section 1 is in the viewport
-        section1.classList.add("your-active-class"); // add the class
+function makeActive() {
+    for (const section of navbarSections) {
+      const box = section.getBoundingClientRect();
+      // You can play with the values in the "if" condition to further make it more accurate. 
+      if (box.top <= 150 && box.bottom >= 150) {
+        section.classList.add("your-active-class");
     } else {
-        section1.classList.remove("your-active-class"); // otherwise remove the class
+        section.classList.remove("your-active-class");
+      }
     }
-    if (isInViewport(section2)) { // if section 2 is in the viewport
-        section2.classList.add("your-active-class"); // add the class
-    } else {
-        section2.classList.remove("your-active-class"); // otherwise remove the class
-    }
-    if (isInViewport(section3)) { // if section 3 is in the viewport
-        section3.classList.add("your-active-class"); // add the class
-    } else {
-        section3.classList.remove("your-active-class"); // otherwise remove the class
-    }
-    if (isInViewport(section4)) { // if section 4 is in the viewport
-        section4.classList.add("your-active-class"); // add the class
-    } else {
-        section4.classList.remove("your-active-class"); // otherwise remove the class
-    }
-}
+  }
+
+  // Make sections active
+  // from https://knowledge.udacity.com/questions/85408
+document.addEventListener("scroll", function() {
+    makeActive();
+  });
 
 //build a scroll function
 // with help from Udacity mentor https://knowledge.udacity.com/questions/779725 and https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link
